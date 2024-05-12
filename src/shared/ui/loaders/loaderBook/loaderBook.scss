@@ -1,0 +1,51 @@
+.skeleton {
+	background-color: rgb(199, 199, 199);
+	margin: 10px 0;
+	border-radius: 0.25rem;
+	width: 100%;
+}
+
+.book-skeleton {
+	height: 353px;
+	width: 240px;
+	&__img {
+		margin: 0 auto;
+		height: 60%;
+		width: 60%;
+	}
+	&__title {
+		width: 100%;
+	}
+	&__subtitle {
+		width: 100%;
+	}
+	
+	&__price {
+		width: 100%;
+	}
+}
+
+@keyframes pulse {
+	100% {
+		opacity: 0.5;
+	}
+}
+
+.animation-pulse {
+	animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.book {
+	&__title {
+		color: var(--black);
+	}
+	&__subtitle {
+		font-size: 14px;
+		margin: 5px 0;
+		color: var(--text-primary);
+	}
+
+	&__price {
+		color: var(--red);
+	}
+}

@@ -1,0 +1,73 @@
+@use "../../../app/styles/breakpoints.scss";
+.nav {
+	margin-top: 10px;
+	background: var(--light);
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	position: sticky;
+	top: 0;
+	z-index: 99;
+	&-wrapper {
+		padding: 25px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__hide-btn {
+		display: none;
+	}
+}
+.inactive__link {
+	color: var(--text-primary);
+	font-size: 14px;
+}
+.active__link {
+	font-size: 14px;
+	transition: all 0.5s ease-in-out;
+	color: var(--red);
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: -5px;
+		display: inline-block;
+		transition: all 0.5s ease-in-out;
+		height: 2px;
+		background-color: var(--red);
+		color: var(--red);
+		left: 0%;
+		width: 100%;
+	}
+}
+
+.nav-open {
+	display: none;
+}
+@media (max-width: breakpoints.$md) {
+	.nav-open {
+		display: block;
+		.nav__hide-btn {
+			display: block;
+			position: absolute;
+			left: 60%;
+			top: 4%;
+			z-index: 100;
+			background: none;
+			border: none;
+			font-size: 20px;
+		}
+		.nav-wrapper {
+			flex-direction: column;
+			align-items: flex-start;
+			position: absolute;
+			z-index: 99;
+			top: 0%;
+			height: 100vh;
+			width: 70vw;
+			background-color: var(--light);
+		}
+	}
+	.nav {
+		display: none;
+	}
+}

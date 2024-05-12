@@ -1,0 +1,7 @@
+@import './themes/light.scss';
+@import 'breakpoints.scss';
+
+.app {
+    height: 100%;
+    background: var(--white);
+}

@@ -1,0 +1,72 @@
+.dropdown {
+	position: relative;
+	&__wrapper-content {
+		position: absolute;
+		display: none;
+		z-index: 100;
+	}
+
+	&__content {
+		position: relative;
+		border: 1px solid var(--border);
+		border-radius: 4px;
+		background: var(--white);
+		box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+			rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+			rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+	}
+	// Changable classes
+
+	&_with-arrow {
+		.dropdown__content::before {
+			content: "";
+			position: absolute;
+			right: 45%;
+			top: -8px;
+			width: 15px;
+			height: 15px;
+
+			-webkit-transform: rotate(45deg);
+			transform: rotate(45deg);
+
+			border: 1px solid var(--border);
+			border-right: none;
+			border-bottom: none;
+			background: var(--white);
+		}
+	}
+	&_opening-state_hover {
+		.dropdown__label:hover ~ .dropdown__wrapper-content {
+			display: block;
+			width: 400px;
+			left: -173%;
+			top: 150%;
+
+		}
+	}
+	&__wrapper-content:hover {
+		display: block;
+		width: 400px;
+		left: -173%;
+		top: 150%;
+
+	}
+
+	&_open {
+		.dropdown__wrapper-content {
+			display: block;
+		width: 100%;
+
+		}
+	}
+	&_close {
+		.dropdown__wrapper-content {
+			display: none;
+		}
+	}
+	// for search starts
+	// for search endpoint
+
+	// for cart starts
+	// for cart endpoint
+}

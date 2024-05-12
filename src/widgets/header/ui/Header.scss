@@ -1,0 +1,63 @@
+@use "../../../app/styles/breakpoints.scss";
+
+.header {
+	padding-top: 40px;
+	padding-bottom: 40px;
+
+	&__wrapper {
+		display: grid;
+		align-items: center;
+		justify-content: space-between;
+		grid-template-columns: 20% 50% 20%;
+		grid-template-areas: "title search link";
+	}
+
+	&__title {
+		grid-area: title;
+		max-width: max-content;
+		margin: 0;
+		font-weight: bold;
+		white-space: nowrap;
+		color: var(--primary-bg);
+	}
+
+	&__search {
+		grid-area: search;
+		justify-self: stretch;
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+
+	&__link {
+		grid-area: link;
+		justify-self: end;
+	}
+}
+
+.dropdown-btn {
+	display: none;
+}
+@media (max-width: breakpoints.$md) {
+	.header {
+		padding-top: 20px;
+		padding-bottom: 20px;
+
+		&__wrapper {
+			justify-content: start;
+			grid-template-columns: 20% 40% 40%;
+			grid-template-rows: repeat(2, 1fr);
+			grid-template-areas:
+				"title title link"
+				"menu search search"; /* Change the grid-template-areas for smaller screens */
+			gap: 20px 0;
+		}
+	}
+	.dropdown-btn {
+		display: block;
+		grid-area: menu;
+		justify-content: start;
+		background: none;
+		width: 50px;
+		border: none;
+	}
+}

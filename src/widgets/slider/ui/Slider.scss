@@ -1,0 +1,12 @@
+@use "../../../app/styles/breakpoints.scss";
+
+.slide__img{
+width: 100%;
+height: 400px;
+}
+
+@media (max-width: breakpoints.$md){
+    .slider-wrapper{
+        display: none;
+    }
+}

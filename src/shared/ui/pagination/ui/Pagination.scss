@@ -1,0 +1,53 @@
+@use "../../../../app/styles/breakpoints";
+
+.pagination__list {
+	display: flex;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	.page-item {
+		cursor: pointer;
+		margin: 0 5px;
+		padding: 5px 10px;
+		color: var(--text-input);
+	}
+}
+.previos-btn,
+.next-btn {
+	border-radius: 3px;
+	&:hover {
+		background: var(--primary-bg);
+	}
+}
+
+.previos-link,
+.next-link {
+	color: var(--text-input);
+}
+.disabled-btn {
+	background: var(--blue);
+	color: var(--light);
+	opacity: 0.5;
+}
+.active-link {
+	color: var(--light) !important;
+	border-radius: 4px;
+	background: var(--primary-bg);
+}
+
+@media (max-width: breakpoints.$md) {
+	.page-item {
+		margin: 0 3px;
+		padding: 2px 4px;
+		font-size: 14px;
+	}
+}
+@media (max-width: breakpoints.$sm) {
+	.page-item {
+		font-size: 12px;
+	}
+	.previos-btn,
+	.next-btn {
+	font-size: 12px;
+	}
+}

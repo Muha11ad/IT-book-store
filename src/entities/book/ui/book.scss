@@ -1,0 +1,60 @@
+.book {
+	&-wrapper {
+		position: relative;
+		overflow: hidden;
+	}
+	&__link {
+		display: flex;
+		flex-direction: column;
+		width: 240px;
+	}
+
+	&__title {
+		color: var(--black);
+	}
+	&__subtitle {
+		font-size: 14px;
+		margin: 5px 0;
+		color: var(--text-primary);
+	}
+
+	&__price {
+		color: var(--red);
+	}
+	&__btn {
+		background: none;
+		display: flex;
+		align-items: center;
+        border: 1px solid var(--border);
+		color: var(--text-primary);
+        gap: 10px;
+		border-radius: 4px;
+        padding: 8px 15px;
+        margin: 10px auto;
+	}
+	&__btn:hover {
+		border-color: var(--primary-bg);
+		color: var(--primary-bg);
+	}
+	&__btn-img {
+        width: 20px;
+	}
+    
+
+}
+
+.book-dropdown {
+	width: 100%;
+	height: 0;
+	background: white;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	overflow: hidden;
+	padding-top: 20px;
+	font-size: 14px;
+	transition: height 0.5s;
+}
+.book-wrapper:hover .book-dropdown {
+	height: 45%;
+}

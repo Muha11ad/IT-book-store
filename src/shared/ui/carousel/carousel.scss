@@ -1,0 +1,40 @@
+@use "../../../app/styles/breakpoints.scss";
+
+.carousel {
+	position: relative;
+	margin: 50px 0;
+	&-prev-btn,
+	&-next-btn {
+		top: 44%;
+		border: none;
+		font-size: 40px;
+		background: none;
+		position: absolute;
+		color: var(--text-input);
+		&:hover {
+			color: var(--primary-bg);
+		}
+		&:disabled {
+			color: var(--border);
+		}
+	}
+	&-prev-btn {
+		left: 1%;
+	}
+	&-next-btn {
+		right: 1%;
+	}
+}
+
+.alice-carousel__dots {
+	position: absolute;
+	top: 85%;
+	left: 47%;
+}
+
+@media (max-width: breakpoints.$md){
+	.alice-carousel__stage{
+		display: flex;
+		justify-content: space-around;
+	}
+}
