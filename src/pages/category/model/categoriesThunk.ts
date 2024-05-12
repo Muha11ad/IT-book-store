@@ -1,4 +1,3 @@
-//@ts-ignore
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { getCategory } from "../../../shared/api/category";
 

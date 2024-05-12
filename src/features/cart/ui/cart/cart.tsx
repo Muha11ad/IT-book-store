@@ -4,17 +4,17 @@ import { DropDown } from "../../../../shared/ui/dropDown";
 import { DropDownCart } from "../dropDownCart/dropDownCart";
 import cartImg from "../../../../shared/icons/bag.svg";
 import { useAppSelector } from "../../../../shared/store/store";
-import { selectCartCount } from "../../../../pages/cart/model/CartSelector";
+import { selectCartData } from "../../../../pages/cart/model/CartSelector";
 
 export const Cart = () => {
-	const count = useAppSelector(selectCartCount);
+	const data = useAppSelector(selectCartData);
 	return (
 		<div className="cart-wrapper">
 			<DropDown
 				labelElement={
 					<Link className="cart-link" to="/cart">
 						<img className="cart-img" src={cartImg} alt="Shopping bag" />
-						<span className="cart-count">{count}</span>
+						<span className="cart-count">{data.length + 1}</span>
 					</Link>
 				}
 				content={<DropDownCart />}

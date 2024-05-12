@@ -1,13 +1,21 @@
-.table{
-    border-collapse: collapse;
-    border: 1px solid var(--border);
-    width: 100%;
-    margin : 50px 0;
-    
-    &-row{
-        padding: 20px 40px;
-        display: flex; 
-        justify-content: space-between;
-        align-items: center
-    }
+.table {
+	border-collapse: collapse;
+	border: 1px solid var(--border);
+	width: 100%;
+	margin: 50px 0;
+	&-row {
+		padding: 20px 40px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__footer-item {
+		font-size: 1.2rem;
+        color: var(--text-primary);
+	}
+}
+
+.cart-total-price {
+	color: var(--red);
+    font-weight: 600;
 }

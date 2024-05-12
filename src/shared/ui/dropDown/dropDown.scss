@@ -34,6 +34,13 @@
 			border-bottom: none;
 			background: var(--white);
 		}
+		.dropdown__wrapper-content:hover {
+			display: block;
+			width: 380px;
+			left: -173%;
+			top: 150%;
+	
+		}
 	}
 	&_opening-state_hover {
 		.dropdown__label:hover ~ .dropdown__wrapper-content {
@@ -43,13 +50,8 @@
 			top: 150%;
 
 		}
-	}
-	&__wrapper-content:hover {
-		display: block;
-		width: 400px;
-		left: -173%;
-		top: 150%;
-
+		
+	
 	}
 
 	&_open {
@@ -64,9 +66,4 @@
 			display: none;
 		}
 	}
-	// for search starts
-	// for search endpoint
-
-	// for cart starts
-	// for cart endpoint
 }

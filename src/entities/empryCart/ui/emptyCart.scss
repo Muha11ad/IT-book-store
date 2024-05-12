@@ -1,0 +1,24 @@
+.emptyCart {
+	&-wrapper {
+        gap: 50px;
+		width: 100%;
+		display: flex;
+        margin-top: 50px;
+        margin-bottom: 17%;
+        align-items: center;
+		flex-direction: column;
+	}
+	&__title {
+		font-size: 20px;
+		font-weight: 600;
+		color: var(--text-input);
+	}
+	&__link {
+		font-size: 20px;
+		font-weight: 600;
+		padding: 10px 15px;
+		background: var(--primary-bg);
+		color: var(--white);
+        border-radius: 4px;
+	}
+}

@@ -13,15 +13,41 @@
 		color: var(--text-primary);
 		border: 1px solid var(--border);
 	}
-    &__link{
-        color: var(--white);
-        border-radius: 4px;
-        padding: 10px;
-        background-color: var(--primary-bg);
+	&__link {
+		color: var(--white);
+		border-radius: 4px;
+		padding: 5px;
+		background-color: var(--primary-bg);
 
-        &:hover{
-            background-color: var(--red);
-        }
-    }
+		&:hover {
+			background-color: var(--red);
+		}
+	}
 
+	&__item {
+		&-link {
+			display: flex;
+			color: var(--text-input);
+		}
+		&-img {
+			width: 20%;
+		}
+		&-info {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 10px;
+			justify-content: space-around;
+		}
+
+		&-title {
+			margin-left: 10px;
+			font-size: 14px;
+			color: var(--text-input);
+		}
+	}
+}
+
+
+.red{
+	color: var(--red);
 }

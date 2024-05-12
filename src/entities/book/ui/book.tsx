@@ -1,13 +1,10 @@
-import { IBookDescription, IBookPreview } from "../model/types";
+import { IBookPreview } from "../model/types";
 import { Link } from "react-router-dom";
 import "./book.scss";
 import cartImg from "../../../shared/icons/bag.svg";
-import {
-	addToCart,
-	getCount,
-	setToLocalStorage,
-} from "../../../pages/cart/model/CartSlice";
+import { addToCart } from "../../../pages/cart/model/CartSlice";
 import { useAppDispatch } from "../../../shared/store/store";
+import { ICartItem } from "../../../pages/cart/model/types";
 export const Book = ({ item }: any) => {
 	const { image, title, price, subtitle, isbn13, categoryId }: IBookPreview =
 		item;
@@ -17,15 +14,13 @@ export const Book = ({ item }: any) => {
 		else return text;
 	}
 
-	function pushItem(item: IBookDescription) {
-		dispatch(getCount(1));
+	function pushItem(item: ICartItem) {
 		dispatch(addToCart(item));
-		dispatch(setToLocalStorage());
 	}
 
 	return (
 		<div className="book-wrapper" id={categoryId}>
-			<Link to="/" className="book__link">
+			<Link to={`/books/${isbn13}`} className="book__link">
 				<img className="book__img" src={image} alt={title} />
 				<div className="book-info">
 					<h3 className="book__title">{cutText(title)}</h3>
