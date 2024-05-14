@@ -1,4 +1,3 @@
-import { LoaderBook } from '../loaderBook/loaderBook'
 import './loaderBookPreview.scss'
 
 export const LoaderBookPreview = () => {
