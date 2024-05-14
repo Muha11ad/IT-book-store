@@ -3,6 +3,7 @@ import ReactPaginate from "react-paginate";
 import { FC } from "react";
 import { setPage } from "../../../../pages/category/model/categoriesSlice";
 import { useAppDispatch } from "../../../store/store";
+import { setSearchPage } from "../../../../features/search/model/searchSlice";
 
 interface IPaginationProps {
 	totalBooks: number;
@@ -18,13 +19,14 @@ export const Pagination: FC<IPaginationProps> = ({ totalBooks }) => {
 			pageLinkClassName="page-link"
 			className="pagination__list"
 			previousLinkClassName="previos-link"
-			previousClassName="previos-btn"
+			previousClassName="previous-btn"
 			nextClassName="next-btn"
 			nextLinkClassName="next-link"
 			disabledClassName="disabled-btn"
 			activeClassName="active-link"
 			onPageChange={(selectedPage: { selected: number }) => {
 				dispatch(setPage(selectedPage.selected + 1));
+				dispatch(setSearchPage(selectedPage.selected + 1));
 			}}
 		/>
 	);

@@ -18,7 +18,7 @@ export const SearchSlice = createSlice({
 	name: "search",
 	initialState,
 	reducers: {
-		setPage(state, action: PayloadAction<number>) {
+		setSearchPage(state, action: PayloadAction<number>) {
 			state.page = action.payload;
 		},
 	},
@@ -28,15 +28,18 @@ export const SearchSlice = createSlice({
 				state.loading = "loading";
 				state.error = null;
 			})
-			.addCase(fetchSearchResult.fulfilled, (state, action: PayloadAction<any>) => {
-				state.data = action.payload;
-				state.loading = "successful";
-				state.error = null;
-			})
+			.addCase(
+				fetchSearchResult.fulfilled,
+				(state, action: PayloadAction<any>) => {
+					state.data = action.payload;
+					state.loading = "successful";
+					state.error = null;
+				}
+			)
 			.addCase(fetchSearchResult.rejected, (state) => {
 				state.loading = "rejected";
 			}),
 });
 
-export const { setPage } = SearchSlice.actions;
+export const { setSearchPage } = SearchSlice.actions;
 export default SearchSlice.reducer;

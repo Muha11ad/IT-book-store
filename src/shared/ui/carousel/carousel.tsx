@@ -35,6 +35,7 @@ export const Carousel: FC<ICarousel> = (props) => {
 				responsive={responsive}
 				onSlideChanged={handleSlideChanged}
 				disableDotsControls={disableDotsControls}
+				
 			/>
 			<button
 				className="carousel-prev-btn"

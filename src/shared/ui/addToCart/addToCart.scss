@@ -1,0 +1,21 @@
+.btn {
+	background: none;
+	display: flex;
+	align-items: center;
+	border: 1px solid var(--border);
+	color: var(--text-primary);
+	gap: 10px;
+	border-radius: 4px;
+	padding: 8px 15px;
+	margin: 10px auto;
+}
+.btn:hover {
+	border-color: var(--primary-bg);
+	color: var(--primary-bg);
+	.btn-img{
+		fill: var(--primary-bg);
+	}
+}
+.btn-img {
+	width: 25px;
+}

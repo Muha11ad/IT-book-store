@@ -1,0 +1,12 @@
+.search-result {
+	&__title {
+        font-size: 20px;
+        margin: 20px;
+        color: var(--text-input);
+	}
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+	}
+}

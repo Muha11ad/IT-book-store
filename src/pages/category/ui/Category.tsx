@@ -23,7 +23,7 @@ export const Category = () => {
 	const { title } = useParams<{ title: string }>();
 	useEffect(() => {
 		if (title) {
-			dispatch(fetchCategory({category : title, page: page }));
+			dispatch(fetchCategory({ category: title, page: page }));
 		}
 	}, [dispatch, title, page]);
 
@@ -31,7 +31,7 @@ export const Category = () => {
 	let content;
 	if (loading === "loading") {
 		// Display skeleton while loading
-		content = [...Array(10).keys()].map(i => {
+		content = [...Array(10).keys()].map((i) => {
 			return <LoaderBook key={i} />;
 		});
 	} else if (loading == "successful") {
@@ -48,7 +48,7 @@ export const Category = () => {
 			<Header />
 			<div className="container category-wrapper">
 				<ul className="category__list">{content}</ul>
-				<Pagination totalBooks={data.total}/>
+				<Pagination totalBooks={data.total} />
 			</div>
 			<Footer />
 		</>

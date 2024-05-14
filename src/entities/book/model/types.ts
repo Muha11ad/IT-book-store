@@ -24,7 +24,7 @@ export interface IBookDescription {
 	/** Link to detailed information about the book. */
 	readonly url: string;
 	/** Price in $00.00 format. */
-	readonly price: number;
+	readonly price: number | string;
 }
 
 export interface IBookPreview {
@@ -37,7 +37,7 @@ export interface IBookPreview {
 	/** Book subtitle. */
 	readonly subtitle: string;
 	/** Price in $00.00 format. */
-	readonly price: number;
+	readonly price: number | string;
 	/** Book category. Passed through a prop if it cannot be calculated dynamically. */
 	readonly categoryId?: string;
 	/** Additional styles. */

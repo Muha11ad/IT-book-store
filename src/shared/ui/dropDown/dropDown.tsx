@@ -20,11 +20,18 @@ export const DropDown: FC<IDropDown> = (props) => {
 
 	let isOpenDropDown = isOpen ? "dropdown_open" : "dropdown_close";
 	if (isOpen === undefined) {
-		isOpenDropDown = 'dropdown_opening-state_hover'
+		isOpenDropDown = "dropdown_opening-state_hover";
 	}
-	
+
 	return (
-		<div className={clsx("dropdown", isOpenDropDown, isArrow && "dropdown_with-arrow", className)}>
+		<div
+			className={clsx(
+				"dropdown",
+				isOpenDropDown,
+				isArrow && "dropdown_with-arrow",
+				className
+			)}
+		>
 			<div className="dropdown__label">{labelElement}</div>
 			<div className="dropdown__wrapper-content">
 				<div className="dropdown__content">{content}</div>

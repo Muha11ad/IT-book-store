@@ -1,0 +1,73 @@
+@use "../../../app/styles/breakpoints.scss";
+
+.book {
+	&-wrapper {
+		margin: 50px 0;
+	}
+	&-content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 50px;
+	}
+
+	&__carousel {
+		width: 300px;
+	}
+	&-info {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 20px;
+		&__title {
+			font-size: 30px;
+			font-weight: 600;
+			color: var(--text-input);
+			&__link {
+				color: var(--primary-bg);
+				font-size: 16px;
+			}
+		}
+
+		&__list {
+			color: var(--text-input);
+		}
+	}
+
+	&__description {
+		&-title {
+			font-size: 30px;
+			color: var(--text-input);
+		}
+		&-subtitle {
+			color: var(--text-primary);
+		}
+	}
+}
+
+.line {
+	width: 15%;
+	height: 1px;
+	background-color: var(--border);
+	margin: 15px 0;
+	position: relative;
+	&::before {
+		position: absolute;
+		content: "";
+		width: 40%;
+		height: 1px;
+		background-color: var(--red);
+	}
+}
+
+@media (max-width: breakpoints.$md){
+	.book {
+		&-content {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			margin-bottom: 30px;
+			gap: 10px;
+		}
+	}	
+}

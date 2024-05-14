@@ -13,3 +13,7 @@ export const selectSearchLoading = createSelector(
 	selectBase,
 	(state: any) => state.loading
 );
+export const selectSearchPage = createSelector(
+	selectBase,
+	(state: any) => state.page
+);

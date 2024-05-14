@@ -12,10 +12,12 @@
 		color: var(--text-input);
 	}
 }
-.previos-btn,
+.previous-btn,
 .next-btn {
 	border-radius: 3px;
+	cursor: pointer;
 	&:hover {
+		border-radius: 4px;
 		background: var(--primary-bg);
 	}
 }
@@ -23,6 +25,10 @@
 .previos-link,
 .next-link {
 	color: var(--text-input);
+	&:hover{
+		color: var(--white) !important;
+		padding: 2px 4px;
+	}
 }
 .disabled-btn {
 	background: var(--blue);
@@ -48,6 +54,6 @@
 	}
 	.previos-btn,
 	.next-btn {
-	font-size: 12px;
+		font-size: 12px;
 	}
 }
